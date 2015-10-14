@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head> 
+        <title>Battleships</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    </head>
+    <body>
+	    <div class="container-fluid">
+	    	<div class="input-group">
+			    <input class="form-control" id="letter" type="text"  placeholder="enter your targer row letter" />
+			    <input class="form-control" id="number" type="text"  placeholder="enter your target column number" />
+			    <button class="btn btn-success" type="button" onclick="Battle.userInput();">Attack</button>
+			</div>
+	    	
+		    <div class="info" style="position:relative; width:100%;">
+		    	<h1>Please refer to the table below to enter target inputs for attacking battleships.</h1>
+		    	<p>*Target row input must be capital letters only.</p>
+		    	<p>*Target column input must be non-negative intergers.</p>
+		    	<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Target Row Letters</th>
+							<th>Target Column Numbers</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>A</td><td>0-9</td></tr>
+						<tr><td>B</td><td>0-9</td></tr>
+						<tr><td>C</td><td>0-9</td></tr>
+						<tr><td>D</td><td>0-9</td></tr>
+						<tr><td>E</td><td>0-9</td></tr>
+						<tr><td>F</td><td>0-9</td></tr>
+						<tr><td>G</td><td>0-9</td></tr>
+						<tr><td>H</td><td>0-9</td></tr>
+						<tr><td>I</td><td>0-9</td></tr>
+						<tr><td>J</td><td>0-9</td></tr>
+					</tbody>
+				</table>
+		    </div>
+		</div>
+	    <script src="battleship.js"></script>
+	    <script type="text/javascript">
+	    	var Battle = new Battleship();
+	    </script>
+    </body>
+</html>
