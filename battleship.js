@@ -29,9 +29,8 @@ Method to return attack coordinates from user input
 Battleship.prototype.userInput = function() {
 	var battleshipTable = this.matrix(),
 		battleshipLetters = this.randomLetter(battleshipTable),
-		battleRowInput  = document.getElementById('letter').value,
-		battleColInput = document.getElementById('number').value;
-
+		battleInput  = document.getElementById('attackNumbers').value;
+	
 	for(var i = 0; i <= 4; i++) {
 		
 		battleshipTable[battleshipLetters][i] = "Battleship";
@@ -49,16 +48,18 @@ Battleship.prototype.userInput = function() {
 		}
 	}
 
+	
 	try {
-		if( battleshipTable[battleRowInput ][battleColInput] ) {
+
+		if( battleshipTable[battleInput.charAt(0)][battleInput.charAt(1)] ) {
 			
-			alert("Good hit solider! " + battleshipTable[battleRowInput ][battleColInput] + " has been destroyed!");
+			alert("Good hit solider! " + battleshipTable[battleInput.charAt(0)][battleInput.charAt(1)] + " has been destroyed!");
 		
-		} else if( battleshipTable[battleRowInput ][battleColInput] === null ) {
+		} else if( battleshipTable[battleInput.charAt(0)][battleInput.charAt(1)] === null ) {
 			
 			alert("Your shot missed! Try again private!");
 		
-		} else if( battleshipTable[battleRowInput ][battleColInput] === undefined ) {
+		} else if( battleshipTable[battleInput.charAt(0)][battleInput.charAt(1)] === undefined ) {
 			
 			alert('Please enter correct input! Refer to table!');
 		
